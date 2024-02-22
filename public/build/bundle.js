@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35736/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35734/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -21332,11 +21332,11 @@ var app = (function () {
     			t8 = space();
     			create_component(worldmap.$$.fragment);
     			attr_dev(h1, "class", "svelte-1vlfzys");
-    			add_location(h1, file, 7, 1, 121);
+    			add_location(h1, file, 7, 1, 123);
     			attr_dev(a, "href", "https://www.kaggle.com/datasets/imdevskp/corona-virus-report?resource=download");
-    			add_location(a, file, 8, 79, 230);
+    			add_location(a, file, 8, 79, 232);
     			attr_dev(p, "class", "svelte-1vlfzys");
-    			add_location(p, file, 8, 1, 152);
+    			add_location(p, file, 8, 1, 154);
     			attr_dev(input, "type", "range");
     			attr_dev(input, "min", "0");
     			attr_dev(input, "max", "daysCount");
@@ -21344,13 +21344,13 @@ var app = (function () {
     			attr_dev(input, "id", "timeSlider");
     			attr_dev(input, "step", "1");
     			attr_dev(input, "class", "svelte-1vlfzys");
-    			add_location(input, file, 9, 1, 340);
+    			add_location(input, file, 9, 1, 342);
     			attr_dev(label, "for", "timeSlider");
     			attr_dev(label, "id", "sliderLabel");
     			attr_dev(label, "class", "svelte-1vlfzys");
-    			add_location(label, file, 10, 1, 421);
+    			add_location(label, file, 10, 1, 423);
     			attr_dev(main, "class", "svelte-1vlfzys");
-    			add_location(main, file, 6, 2, 113);
+    			add_location(main, file, 6, 2, 115);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -21401,22 +21401,16 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
-    	let { name = 'World' } = $$props;
     	let daysCount;
-    	const writable_props = ['name'];
+    	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$$set = $$props => {
-    		if ('name' in $$props) $$invalidate(0, name = $$props.name);
-    	};
-
-    	$$self.$capture_state = () => ({ name, WorldMap, daysCount });
+    	$$self.$capture_state = () => ({ WorldMap, daysCount });
 
     	$$self.$inject_state = $$props => {
-    		if ('name' in $$props) $$invalidate(0, name = $$props.name);
     		if ('daysCount' in $$props) daysCount = $$props.daysCount;
     	};
 
@@ -21424,13 +21418,13 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [name];
+    	return [];
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init$1(this, options, instance, create_fragment, safe_not_equal, { name: 0 });
+    		init$1(this, options, instance, create_fragment, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -21438,14 +21432,6 @@ var app = (function () {
     			options,
     			id: create_fragment.name
     		});
-    	}
-
-    	get name() {
-    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
-    	}
-
-    	set name(value) {
-    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
